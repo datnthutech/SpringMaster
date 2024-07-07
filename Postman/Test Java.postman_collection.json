@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "ee4a5570-c42d-40d7-9785-6f8327c8d1f9",
+		"name": "Test Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17976186"
+	},
+	"item": [
+		{
+			"name": "Test Limit Timeout Method with Java",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/home/hotels?lstDelaysTime=300,100,100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"home",
+						"hotels"
+					],
+					"query": [
+						{
+							"key": "lstDelaysTime",
+							"value": "300,100,100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Ex op 3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/home/hotels?lstDelaysTime=300,200,400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"home",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "lstDelaysTime",
+									"value": "300,200,400"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 04:55:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"hotelCode\": 1,\n        \"hotelName\": \"Hotel VietNam 1-delay 400-bygetByNormal\",\n        \"countryCode\": \"VN\",\n        \"currencyCode\": \"VND\"\n    },\n    {\n        \"hotelCode\": 2,\n        \"hotelName\": \"Hotel Korean 2-delay 400-bygetByNormal\",\n        \"countryCode\": \"KR\",\n        \"currencyCode\": \"KRW\"\n    },\n    {\n        \"hotelCode\": 3,\n        \"hotelName\": \"Hotel Japan 3-delay 400-bygetByNormal\",\n        \"countryCode\": \"JP\",\n        \"currencyCode\": \"JPY\"\n    },\n    {\n        \"hotelCode\": 4,\n        \"hotelName\": \"Hotel Thailand 4-delay 400-bygetByNormal\",\n        \"countryCode\": \"TH\",\n        \"currencyCode\": \"THB\"\n    },\n    {\n        \"hotelCode\": 5,\n        \"hotelName\": \"Hotel Singapore 5-delay 400-bygetByNormal\",\n        \"countryCode\": \"SK\",\n        \"currencyCode\": \"SGD\"\n    }\n]"
+				},
+				{
+					"name": "Ex op 1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/home/hotels?lstDelaysTime=100,300,400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"home",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "lstDelaysTime",
+									"value": "100,300,400"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 04:56:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"hotelCode\": 1,\n        \"hotelName\": \"Hotel VietNam 1-delay 100-bygetByRedis\",\n        \"countryCode\": \"VN\",\n        \"currencyCode\": \"VND\"\n    },\n    {\n        \"hotelCode\": 2,\n        \"hotelName\": \"Hotel Korean 2-delay 100-bygetByRedis\",\n        \"countryCode\": \"KR\",\n        \"currencyCode\": \"KRW\"\n    },\n    {\n        \"hotelCode\": 3,\n        \"hotelName\": \"Hotel Japan 3-delay 100-bygetByRedis\",\n        \"countryCode\": \"JP\",\n        \"currencyCode\": \"JPY\"\n    },\n    {\n        \"hotelCode\": 4,\n        \"hotelName\": \"Hotel Thailand 4-delay 100-bygetByRedis\",\n        \"countryCode\": \"TH\",\n        \"currencyCode\": \"THB\"\n    },\n    {\n        \"hotelCode\": 5,\n        \"hotelName\": \"Hotel Singapore 5-delay 100-bygetByRedis\",\n        \"countryCode\": \"SK\",\n        \"currencyCode\": \"SGD\"\n    }\n]"
+				},
+				{
+					"name": "Ex op 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/home/hotels?lstDelaysTime=300,100,100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"home",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "lstDelaysTime",
+									"value": "300,100,100"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 04:57:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"hotelCode\": 1,\n        \"hotelName\": \"Hotel VietNam 1-delay 100-bygetByDbJoinReservation\",\n        \"countryCode\": \"VN\",\n        \"currencyCode\": \"VND\"\n    },\n    {\n        \"hotelCode\": 2,\n        \"hotelName\": \"Hotel Korean 2-delay 100-bygetByDbJoinReservation\",\n        \"countryCode\": \"KR\",\n        \"currencyCode\": \"KRW\"\n    },\n    {\n        \"hotelCode\": 3,\n        \"hotelName\": \"Hotel Japan 3-delay 100-bygetByDbJoinReservation\",\n        \"countryCode\": \"JP\",\n        \"currencyCode\": \"JPY\"\n    },\n    {\n        \"hotelCode\": 4,\n        \"hotelName\": \"Hotel Thailand 4-delay 100-bygetByDbJoinReservation\",\n        \"countryCode\": \"TH\",\n        \"currencyCode\": \"THB\"\n    },\n    {\n        \"hotelCode\": 5,\n        \"hotelName\": \"Hotel Singapore 5-delay 100-bygetByDbJoinReservation\",\n        \"countryCode\": \"SK\",\n        \"currencyCode\": \"SGD\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Template request get Hotels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/home/hotels2"
+			},
+			"response": [
+				{
+					"name": "Ex",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/home/hotels2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 04:57:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"Hotel1\",\n    \"Hotel2\"\n]"
+				}
+			]
+		}
+	]
+}
